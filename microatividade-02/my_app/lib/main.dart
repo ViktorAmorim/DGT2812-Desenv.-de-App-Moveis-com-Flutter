@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  return runApp(MaterialApp(
+  return runApp(const MaterialApp(
     home: StatelessWidgetExemplo("Olá Flutter - MaterialApp"),
   ));
 }
@@ -9,7 +9,7 @@ void main() {
 class StatelessWidgetExemplo extends StatelessWidget {
   final String _appBarTitle;
 
-  StatelessWidgetExemplo(this._appBarTitle) : super();
+  const StatelessWidgetExemplo(this._appBarTitle, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class StatelessWidgetExemplo extends StatelessWidget {
       appBar: AppBar(
         title: Text(_appBarTitle),
       ),
-      body: Center(
+      body: const Center(
         child: Text("Macoratti .net"),
       ),
     );
